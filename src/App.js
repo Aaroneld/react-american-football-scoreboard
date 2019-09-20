@@ -13,7 +13,6 @@ function App() {
   const [homeScore, setHomeScore] = React.useState(0);
   const [awayScore, setAwayScore] = React.useState(0);
 
-  
 
   return (
     <div className="container">
@@ -28,12 +27,12 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <HomeTouchdown dataFromParent={homeScore} callbackFromParent={setHomeScore(0)} />
-          <HomeFieldGoal dataFromParent={homeScore} callbackFromParent={setHomeScore(0)} />         
+          <HomeTouchdown dataFromParent={homeScore} callbackFromParent={setHomeScore} />
+          <HomeFieldGoal dataFromParent={homeScore} callbackFromParent={setHomeScore} />         
         </div>
         <div className="awayButtons">
-          <AwayTouchdown dataFromParent={awayScore} callbackFromParent={setAwayScore(0)}/>
-          <AwayFieldGoal dataFromParent={awayScore} callbackFromParent={setAwayScore(0)}/>   
+          <AwayTouchdown dataFromParent={awayScore} callbackFromParent={setAwayScore}/>
+          <AwayFieldGoal dataFromParent={awayScore} callbackFromParent={setAwayScore}/>   
          
         </div>
       </section>
